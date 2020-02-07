@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.default-content-width {
+    max-width: 960px;
+    padding: 0 10px;
+    margin: auto;
+}
+.head-panel {
+    height: 100px;
+}
+.head-panel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head-panel-container img {
+    padding: 12.5px 0;
+}
+.head-contact {
+    text-align: right;
+}
+.head-contact .phone-number {
+    font-weight: 700;
+    font-size: 21px;
+    color: #5e5e5e;
+    margin: 10px 0 0 0;
+}
+.head-contact .order-back-call {
+    font-weight: 500;
+    font-size: 11px;
+    color: #5892a6;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+.head-contact .order-back-call::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #5892a6;
+}
+.head-contact .order-back-call:focus {
+    outline: none;
+}
+.head-contact .order-back-call:hover {
+    cursor: pointer;
+}
+.head-contact .order-back-call:hover::after {
+    border-color: transparent;
+}
+.head-content {
+    background: url(../images/backgrounds/head.jpg) center no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 80px 0 65px 0;
+}
+.head-content-container {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+}
+.head-content .text {
+    text-align: right;
+    width: 70%;
+}
+.head-content .text .bold-text {
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 50px;
+    color: #535353;
+}
+.head-content .text .medium-text {
+    font-weight: 500;
+    font-size: 27px;
+    color: #5892a6;
+}
+.order-back-call-form-container {
+    right: 0;
+    width: 300px;
+    height: 240px;
+    border-radius: 18px;
+    margin-top: 65px;
+    background-color: #fff;
+    text-align: center;
+    padding: 38px 0;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(104,176,201,0.62);
+    -moz-box-shadow: 0px 0px 21px 1px rgba(104,176,201,0.62);
+    box-shadow: 0px 0px 21px 1px rgba(104,176,201,0.62);
+}
+.order-back-call-form-container .question {
+    font-weight: 700;
+    font-size: 20px;
+    color: #5892a6;
+    margin-bottom: 14px;
+}
+.order-back-call-form-container .offer {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.order-back-call-form .phone-field,
+.order-back-call-form .submit {
+    width: 220px;
+    height: 40px;
+    border-radius: 17px;
+}
+.order-back-call-form .phone-field:focus,
+.order-back-call-form .submit:focus {
+    outline: none;
+}
+.order-back-call-form .phone-field {
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 14px;
+    color: #535353;
+}
+.order-back-call-form .submit {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background-color: #68b0c9;
+}
