@@ -40,7 +40,7 @@ body {
     color: #5e5e5e;
     margin: 10px 0 0 0;
 }
-.head-contact .order-back-call {
+.head-contact .order-back-call-link {
     font-weight: 500;
     font-size: 11px;
     color: #5892a6;
@@ -48,18 +48,18 @@ body {
     border: none;
     padding: 0;
 }
-.head-contact .order-back-call::after {
+.head-contact .order-back-call-link::after {
     content: "";
     display: block;
     border-top: 1px solid #5892a6;
 }
-.head-contact .order-back-call:focus {
+.head-contact .order-back-call-link:focus {
     outline: none;
 }
-.head-contact .order-back-call:hover {
+.head-contact .order-back-call-link:hover {
     cursor: pointer;
 }
-.head-contact .order-back-call:hover::after {
+.head-contact .order-back-call-link:hover::after {
     border-color: transparent;
 }
 .head-content {
@@ -113,8 +113,28 @@ body {
     font-size: 14px;
     margin-bottom: 20px;
 }
-.order-back-call-form .phone-field,
-.order-back-call-form .submit {
+.main-btn {
+    width: 220px;
+    height: 40px;
+    border-radius: 17px;
+    padding: 0 15px;
+    outline: none;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    background-color: #68b0c9;
+    transition: 0.3s ease-in-out;
+    -webkit-box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
+    -moz-box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
+    box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
+}
+.main-btn:hover {
+    cursor: pointer;
+}
+.order-back-call-form .phone-field {
     width: 220px;
     height: 40px;
     border-radius: 17px;
@@ -129,23 +149,6 @@ body {
     border: 1px solid #e8e8e8;
     margin-bottom: 14px;
     color: #535353;
-}
-.order-back-call-form .submit {
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: #fff;
-    border: none;
-    background-color: #68b0c9;
-    transition: 0.3s ease-in-out;
-    -webkit-box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
-    -moz-box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
-    box-shadow: 0px 6px 12px 5px rgba(104,176,201,0.44);
-}
-.order-back-call-form .submit:hover {
-    cursor: pointer;
-    letter-spacing: 1px;
 }
 
 /* ==============================
@@ -219,4 +222,117 @@ body {
     .advantages-item .arrow-left {
         right: 20%;
     }
+}
+
+/* ==============================
+        ACTION SECTION
+================================= */
+
+.sale-section {
+    background: url(../images/backgrounds/price.jpg) center no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 70px 0 40px 0;
+}
+.sale-section {
+    overflow: hidden;
+}
+.sale-section .sale-content-container {
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+}
+.price-content {
+    min-width: 380px;
+}
+.term .text {
+    color: #535353;
+}
+.term .text .first-row {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 40px;
+}
+.term .text .second-row {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 40px;
+}
+.term .text .third-row {
+    font-size: 25px;
+    line-height: 38px;
+    color: #68b0c9;
+}
+.sale {
+    position: relative;
+}
+.sale-block {
+    margin-top: 45px;
+    padding: 30px 0;
+    border-radius: 18px;
+    border: 5px solid #fff;
+}
+.about-sale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-sale .term,
+.about-sale .month {
+    font-size: 14px;
+    color: #ba6c6c;
+    width: 25%;
+}
+.about-sale .term {
+    text-align: left;
+}
+.about-sale .date {
+    background: url(../images/price-section/calendar.png) no-repeat center;
+    width: 48px;
+    height: 43px;
+    line-height: 43px;
+    font-size: 30px;
+    color: #fff;
+    margin: 0 10px;
+}
+.sale-block .main-btn {
+    margin-top: 35px;
+}
+.price-arrow {
+    position: absolute;
+    top: 100px;
+    right: 335px;
+}
+.action-price-circle {
+    position: absolute;
+    top: -65px;
+    left: -285px;
+    background-color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    padding: 40px 0;
+}
+.action-price-circle .old-price {
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 300;
+}
+.action-price-circle .old-price::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #e8e8e8;
+    height: 10px;
+    width: 120px;
+    margin: auto;
+}
+.action-price-circle .new-price {
+    margin-left: 8px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 47px;
+    color: #d04545;
 }
