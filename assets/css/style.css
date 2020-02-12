@@ -336,3 +336,45 @@ body {
     line-height: 47px;
     color: #d04545;
 }
+
+/* ==============================
+        ACTION SECTION
+================================= */
+
+.counter-section {
+    padding: 60px 0 60px;
+}
+
+.counters-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.counter,
+.event-name {
+    margin: auto;
+}
+
+
+.event-name {
+    margin-top: 20px;
+}
+
+.counter {
+    background: url(../images/sit-icon.png) center no-repeat;
+    width: 80px;
+    height: 95px;
+    font-size: 48px;
+    color: #68b0c9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #535353;
+}
+
