@@ -1,15 +1,23 @@
-const counters = document.getElementsByClassName('counter');
+const COUNTER_SECTION_CLASS = 'counter-section';
 
-init();
+$(document).ready(function() {
+    const counterSection = $('.' + COUNTER_SECTION_CLASS);
+    if(counterSection.is(':appeared')) {
+        startCounter();
+    }
+    else {
+        setTimeout(function() {
+            counterSection.appear();
+            try {
+                $(document.body).on('appear', '.' + COUNTER_SECTION_CLASS, startCounter());
+            } catch { }
+        }, 500);
+    }
+});
 
-function init() {
-    addSpacesForNumbers();
-}
-
-function addSpacesForNumbers() {
-    Array.prototype.forEach.call(counters, element => {
-        const value = element.innerText;
-        const newValue = Number(value).toLocaleString();
-        element.innerText = newValue;
+function startCounter() {
+    $(".counter").counterUp({
+        delay: 10,
+        time: 1500     
     });
 }

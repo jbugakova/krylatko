@@ -343,38 +343,99 @@ body {
 
 .counter-section {
     padding: 60px 0 60px;
+    overflow: hidden;
 }
-
 .counters-container {
     display: flex;
     justify-content: space-around;
 }
-
 .counter,
 .event-name {
     margin: auto;
 }
-
-
 .event-name {
     margin-top: 20px;
 }
-
 .counter {
     background: url(../images/sit-icon.png) center no-repeat;
-    width: 80px;
+    width: 130px;
     height: 95px;
     font-size: 48px;
     color: #68b0c9;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .event-name {
     font-size: 18px;
     font-weight: 500;
     color: #535353;
 }
 
+/* ==============================
+        ACTION SECTION
+================================= */
+
+.certification-section {
+    background: url(../images/backgrounds/gradient-certification.jpg) center no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 80px 40px;
+    overflow: hidden;
+}
+.certification-section .title {
+    padding-bottom: 55px;
+}
+.certification-container {
+    display: flex;
+    justify-content: space-around;
+}
+.certification-container .certificate-photo {
+    width: 264px;
+    height: 324px;
+    padding-right: 10px;
+}
+.certification-container .certification-description {
+    width: 50%;
+}
+.certification-description .certification-header {
+    display: flex;
+}
+.certification-description .certification-header img {
+    width: 66px;
+    height: 44px;
+    padding-right: 20px;
+}
+.certification-description .certification-header p {
+    font-size: 22px;
+    font-weight: 700;
+    color: #68b0c9;
+}
+.certification-description .certification-text {
+    padding-top: 45px;
+    font-size: 18px;
+    color: #323232;
+}
+.certification-description .certification-text p {
+
+    padding-bottom: 30px;
+}
+
+@media (max-width: 710px) {
+    .certification-section {
+        padding: 40px 10px;
+    }
+}
+@media (max-width: 525px) {
+    .certification-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .certification-container .certification-description {
+        padding-top: 30px;
+        width: 80%;
+    }
+    .certification-section .title {
+        padding-bottom: 30px;
+    }
+}
