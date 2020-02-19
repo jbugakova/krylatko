@@ -338,7 +338,7 @@ body {
 }
 
 /* ==============================
-        ACTION SECTION
+        COUNTER SECTION
 ================================= */
 
 .counter-section {
@@ -373,7 +373,7 @@ body {
 }
 
 /* ==============================
-        ACTION SECTION
+        SECTIFICATION SECTION
 ================================= */
 
 .certification-section {
@@ -438,4 +438,72 @@ body {
     .certification-section .title {
         padding-bottom: 30px;
     }
+}
+
+/* ==============================
+        DESCRIPTION SECTION
+================================= */
+
+.description-section {
+    background-color: #fff;
+    padding: 70px 0 80px;
+}
+.description-container {
+    display: flex;
+}
+.first-column,
+.second-column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+}
+.first-column .description-item {
+    text-align: right;
+}
+.first-column .description-item:nth-of-type(2n) {
+    position: absolute;
+    top: 200px;
+}
+.second-column .description-item:nth-of-type(2n) {
+    position: absolute;
+    top: 200px;
+}
+.photos {
+    position: relative;
+}
+.baby-chair-photo {
+    width: 181px;
+    height: 333px;
+    margin: 0 80px;
+}
+.description-arrrow {
+    position: absolute;
+}
+.left-top-arrow {
+    top: 9px;
+    left: 17px;
+}
+.left-bottom-arrow {
+    top: 171px;
+    left: -15px;
+}
+.right-top-arrow {
+    top: -34px;
+    right: -5px;
+}
+.right-bottom-arrow {
+    top: 212px;
+    right: 7px;
+}
+.description-item .description-item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #68b0c9;
+    margin-bottom: 20px;
+}
+.description-item .description-item-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #606060;
 }
