@@ -306,7 +306,7 @@ body {
     top: 100px;
     right: 335px;
 }
-.action-price-circle {
+.price-circle {
     position: absolute;
     top: -65px;
     left: -285px;
@@ -316,12 +316,12 @@ body {
     border-radius: 75px;
     padding: 40px 0;
 }
-.action-price-circle .old-price {
+.price-circle .old-price {
     text-decoration: line-through;
     font-size: 18px;
     font-weight: 300;
 }
-.action-price-circle .old-price::after {
+.price-circle .old-price::after {
     content: "";
     display: block;
     border-bottom: 1px solid #e8e8e8;
@@ -329,7 +329,7 @@ body {
     width: 120px;
     margin: auto;
 }
-.action-price-circle .new-price {
+.price-circle .new-price {
     margin-left: 8px;
     font-size: 30px;
     font-weight: 700;
@@ -447,6 +447,8 @@ body {
 .description-section {
     background-color: #fff;
     padding: 70px 0 80px;
+    height: auto;
+    overflow: hidden;
 }
 .description-container {
     display: flex;
@@ -506,4 +508,128 @@ body {
     font-size: 14px;
     font-weight: 300;
     color: #606060;
+}
+
+
+/* ==============================
+        BUY NOW SECTION
+================================= */
+
+.buy-now-section {
+    padding: 54px 0 50px;
+    background-color: #ecf3f8;
+    background-image: url(../images/backgrounds/buy-now.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.buy-now-section .price-circle {
+    padding-top: 30px;
+    text-align: center;
+    top: 0;
+    left: 27%;
+}
+.buy-now-section .price-circle-text {
+    font-weight: 700;
+    font-size: 17px;
+    color: #68b0c9;
+    margin-bottom: 10px;
+}
+.buy-now-container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.buy-now-section-order-container {
+    position: relative;
+}
+.buy-now-section-order-text {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    width: 260px;
+    padding: 0 15px;
+    margin-right: 115px;
+    margin-bottom: 25px;
+}
+.buy-now-section-order .main-text {
+    color: #535353;
+}
+.buy-now-section-order .marked-text {
+    color: #68b0c9;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.buy-now-section .order-back-call-form input {
+    display: block;
+    height: 45px;
+    width: 260px;
+}
+.buy-now-section .phone-field {
+    margin-bottom: 23px;
+}
+.buy-now-arrow {
+    position: absolute;
+    top: 57px;
+    right: 8px;
+}
+
+@media (max-width: 850px) {
+    .buy-now-section .default-content-width {
+        padding: 0;
+    }
+    .buy-now-section {
+        background: none;
+    }
+    .buy-now-section-price {
+        z-index: 10;
+        height: 330px;
+        background: url(../images/backgrounds/medium.png) center no-repeat;
+    }
+    .buy-now-container {
+        flex-direction: column;
+        position: relative;
+    }
+    .buy-now-section-order {
+        z-index: 1;
+        position: absolute;
+        top: 315px;
+        background-color: #ecf3f8;
+        padding: 40px 0;
+        width: 100%;
+    }
+    .buy-now-section-order-container {
+        width: 400px;
+        margin: auto;
+        padding-left: 75px;
+    }
+    .buy-now-section .price-circle {
+        top: 76px;
+        left: 39%;
+    }
+    .buy-now-arrow {
+        top: 57px;
+        right: -17px;
+    }
+}
+@media (max-width: 590px) {
+    .buy-now-section-price {
+        background-color: #ecf3f8;
+        background-position: left;
+        background-image: url(../images/backgrounds/small.png);
+    }
+    .buy-now-section .price-circle {
+        top: 76px;
+        left: 55%;
+    }
+    .buy-now-section-price {
+        height: 320px;
+    }
+    .buy-now-arrow {
+        display: none;
+        padding: 0;
+    }
+    .buy-now-section-order-container {
+        width: 260px;
+        padding-left: 0;
+    }
 }
