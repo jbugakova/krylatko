@@ -5,7 +5,7 @@ body {
 }
 * {
     box-sizing: border-box;
-    /* box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.62); */
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.62);
 }
 .default-content-width {
     max-width: 960px;
@@ -763,5 +763,57 @@ body {
     }
     .comparing-title {
         text-align: center;
+    }
+}
+
+/* ==============================
+        COMPARING SECTION
+================================= */
+
+.location-section {
+    background-color: #ecf3f8;
+    padding: 50px 0;
+}
+.location-container {
+    display: flex;
+    justify-content: space-between;
+}
+.map-block{
+    width: 460px;
+    -moz-border-radius: 14px 14px 14px 14px; /* Firefox */
+    -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
+    -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
+    border-radius: 14px 14px 14px 14px; /* CSS3 */
+    overflow: hidden;
+    position: relative; 
+}
+.location-text-container {
+    text-align: center;
+    width: calc(100% - 460px);
+    padding: 30px 0 30px 10px;
+}
+.location-text-container .text {
+    font-size: 16px;
+    color: #535353;
+    margin-bottom: 20px;
+}
+.location-text-container .marked-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #68b0c9;
+    margin-bottom: 55px;
+}
+.location-text-container > img {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+    .location-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .location-container .map-block,
+    .location-container .location-text-container {
+        width: 80%;
     }
 }
