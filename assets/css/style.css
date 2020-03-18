@@ -13,6 +13,79 @@ body {
     margin: auto;
 }
 
+/* ====================================
+    MODAL WINDOWS
+======================================= */
+
+.call-back-modal-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(10, 38, 48, 0.9);
+    z-index: 100;
+    display: flex;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.call-back-modal-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+}
+.call-back-modal-container .order-back-call-form-container {
+    display: none;
+    position: relative;
+    box-shadow: none;
+}
+.call-back-modal-container .order-back-call-form-container.active {
+    display: block;
+}
+.call-back-modal-container .close-btn {
+    position: absolute;
+    top: -60px;
+    right: 0px;
+    font-size: 56px;
+    color: #5ea5bd;
+}
+.call-back-modal-container .close-btn:hover {
+    cursor: pointer;
+}
+.call-back-modal-container .success-request {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    border-radius: 18px;width: 300px;
+    width: 300px;
+    height: 140px;
+    text-align: center;
+    padding: 38px 0;
+}
+.call-back-modal-container .success-request.active {
+    display: block;
+}
+.call-back-modal-container.success {
+    display: none;
+}
+.call-back-modal-container.success.active {
+    display: flex;
+}
+.call-back-modal-container .success-request .main-color {
+    font-weight: 700;
+    font-size: 20px;
+    color: #5892a6;
+    margin-bottom: 14px;
+}
+.call-back-modal-container .success-request .offer {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
 /* ============================
         HEADER
 ============================== */
@@ -101,7 +174,7 @@ body {
     -moz-box-shadow: 0px 0px 21px 1px rgba(104,176,201,0.62);
     box-shadow: 0px 0px 21px 1px rgba(104,176,201,0.62);
 }
-.order-back-call-form-container .question {
+.order-back-call-form-container .main-color{
     font-weight: 700;
     font-size: 20px;
     color: #5892a6;
@@ -249,6 +322,18 @@ body {
     font-size: 25px;
     line-height: 38px;
     color: #68b0c9;
+    animation: pulsation 1.5s infinite linear;
+}
+@keyframes pulsation {
+    0% {
+        transform: scale(0.95);
+    } 
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
 }
 .sale {
     position: relative;
@@ -671,6 +756,17 @@ body {
 }
 .location-text-container > img {
     margin-bottom: 20px;
+}
+.location-img {
+    animation: jump 0.5s infinite linear alternate;
+}
+@keyframes jump {
+    0%   { 
+        transform: translateY(10px); 
+    }
+    100% { 
+        transform: translateY(0); 
+    }
 }
 
 /* ==========================
