@@ -10,14 +10,33 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    
     <script type="text/javascript" src="assets/js/lib/jquery-3.4.1.min.js" defer></script>
-    <script type="text/javascript"  src="assets/js/lib/jquery.appear.js" defer></script>
+    <script type="text/javascript" src="assets/js/lib/phoneFormat.js" defer></script>
+    <script type="text/javascript" src="assets/js/lib/jquery.appear.js" defer></script>
 	<script type="text/javascript" src="assets/js/lib/jquery.waypoints.min.js" defer></script>
     <script type="text/javascript" src="assets/js/lib/jquery.counterup.min.js" defer></script>
     <script type="text/javascript" src="assets/js/script.js" defer></script>
 </head>
 <body>
+    <div class="call-back-modal-container" id="formModalWindow">
+        <div class="order-back-call-form-container" id="orderCallBackModal">
+            <p class="main-color">Обратный звонок</p>
+            <p class="offer">Оставляйте номер, мы вам перезвоним!</p>
+            <form action="post" class="order-back-call-form">
+                <input class="phone-field" type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                <input class="main-btn" type="submit" value="Перезвоните мне">
+            </form>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="success-request" id="successModal">
+            <p class="main-color">Спасибо за вашу заявку!</p>
+            <p class="offer">Менеджер свяжется с вами в ближайшее время!</p>
+            <span class="close-btn">&times;</span>
+        </div>
+    </div>
+
+
+
     <header class="header-section">
         <div class="head-panel">
             <div class="default-content-width">
@@ -25,7 +44,7 @@
                     <img src="assets/images/logo.png" alt="Logo">
                     <div class="head-contact">
                         <p class="phone-number">+7(950)733-31-70</p>
-                        <button id="backCall" class="order-back-call-link underlined-text">Заказать обратный звонок</button>
+                        <button class="order-back-call-link underlined-text open-modal-btn">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
@@ -38,10 +57,10 @@
                         <p class="medium-text">с бесплатной доставкой по Челябинску</p>
                     </div>
                     <div class="order-back-call-form-container">
-                        <p class="question">Нет времени читать?</p>
+                        <p class="main-color">Нет времени читать?</p>
                         <p class="offer">Оставляйте номер, мы вам перезвоним!</p>
                         <form action="post" class="order-back-call-form">
-                            <input class="phone-field" type="text" placeholder="Ваш телефон">
+                            <input class="phone-field" type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off">
                             <input class="main-btn" type="submit" value="Перезвоните мне">
                         </form>
                     </div>
@@ -108,7 +127,7 @@
                                 <p class="date">4</p>
                                 <p class="month">декабря!</p>
                             </div>
-                            <button id="backCall" class="main-btn">Заказать</button>
+                            <button class="main-btn open-modal-btn">Заказать</button>
                         </div>
                         <div class="price-arrow">
                             <img src="assets/images/price-section/price-arrow.png">
@@ -214,8 +233,8 @@
                         </div>
                         <img class="buy-now-arrow" src="assets/images/buy-now-arrow.png">
                         <form action="post" class="order-back-call-form">
-                            <input class="phone-field" type="text" placeholder="Ваш телефон">
-                            <input class="main-btn" type="submit" value="Перезвоните мне">
+                            <input class="phone-field" type="tel" name="phone" placeholder="Ваш телефон" autocomplete="off">
+                            <input id="orderCallBack" class="main-btn" type="submit" value="Перезвоните мне">
                         </form>
                     </div>
                 </div>
@@ -272,11 +291,11 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1139.546875612583!2d61.29163756995605!3d55.16413589212897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c59252d501470f%3A0x6fc5c036d8cac25e!2z0YPQuy4g0JDQutCw0LTQtdC80LjQutCwINCa0L7RgNC-0LvRkdCy0LAsIDM4LCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA0NTQwMDQ!5e0!3m2!1sru!2sua!4v1582823613639!5m2!1sru!2sua" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                
                 </div>
                 <div class="location-text-container">
-                    <img src="assets/images/location.png">
+                    <img class="location-img" src="assets/images/location.png">
                     <p class="text">Забрать кресло можно по адресу:</p>
                     <p class="marked-text">Челябинск, ул.Академика Королёва, 38</p>
                     <p class="text">или используйте</p>
-                    <button class="main-btn">Бесплатная доставка</button>
+                    <button class="main-btn open-modal-btn">Бесплатная доставка</button>
                 </div>
             </div>
         </div>
@@ -293,5 +312,7 @@
             </div>
         </div>
     </footer>
+
+
 </body>
 </html>
