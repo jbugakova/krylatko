@@ -2,10 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    min-width: 970px;
 }
 * {
     box-sizing: border-box;
-    /* box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.62); */
 }
 .default-content-width {
     max-width: 960px;
@@ -150,6 +150,7 @@ body {
     color: #535353;
 }
 
+
 /* ==============================
         ADVANTAGES SECTION
 ================================= */
@@ -205,22 +206,6 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: #535353;
-}
-@media (max-width: 720px) {
-    .advantages-item .arrow-right {
-        left: 30%;
-    }
-    .advantages-item .arrow-left {
-        right: 30%;
-    }
-}
-@media (max-width: 580px) {
-    .advantages-item .arrow-right {
-        left: 20%;
-    }
-    .advantages-item .arrow-left {
-        right: 20%;
-    }
 }
 
 /* ==============================
@@ -420,25 +405,6 @@ body {
     padding-bottom: 30px;
 }
 
-@media (max-width: 710px) {
-    .certification-section {
-        padding: 40px 10px;
-    }
-}
-@media (max-width: 525px) {
-    .certification-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .certification-container .certification-description {
-        padding-top: 30px;
-        width: 80%;
-    }
-    .certification-section .title {
-        padding-bottom: 30px;
-    }
-}
-
 /* ==============================
         DESCRIPTION SECTION
 ================================= */
@@ -509,17 +475,16 @@ body {
     color: #606060;
 }
 
-
 /* ==============================
         BUY NOW SECTION
 ================================= */
 
 .buy-now-section {
-    padding: 54px 0 50px;
-    background-color: #ecf3f8;
+    padding: 54px 0 85px;
     background-image: url(../images/backgrounds/buy-now.png);
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 5;
 }
 .buy-now-section .price-circle {
     padding-top: 30px;
@@ -572,68 +537,6 @@ body {
     right: 8px;
 }
 
-@media (max-width: 850px) {
-    .buy-now-section .default-content-width {
-        padding: 0;
-    }
-    .buy-now-section {
-        background: none;
-        height: 618px;
-    }
-    .buy-now-section-price {
-        z-index: 10;
-        height: 330px;
-        background: url(../images/backgrounds/medium.png) center no-repeat;
-    }
-    .buy-now-container {
-        flex-direction: column;
-        position: relative;
-    }
-    .buy-now-section-order {
-        z-index: 1;
-        position: absolute;
-        top: 315px;
-        background-color: #ecf3f8;
-        padding: 40px 0;
-        width: 100%;
-    }
-    .buy-now-section-order-container {
-        width: 400px;
-        margin: auto;
-        padding-left: 75px;
-    }
-    .buy-now-section .price-circle {
-        top: 76px;
-        left: 39%;
-    }
-    .buy-now-arrow {
-        top: 57px;
-        right: -17px;
-    }
-}
-@media (max-width: 590px) {
-    .buy-now-section-price {
-        background-color: #ecf3f8;
-        background-position: left;
-        background-image: url(../images/backgrounds/small.png);
-    }
-    .buy-now-section .price-circle {
-        top: 76px;
-        left: 55%;
-    }
-    .buy-now-section-price {
-        height: 320px;
-    }
-    .buy-now-arrow {
-        display: none;
-        padding: 0;
-    }
-    .buy-now-section-order-container {
-        width: 260px;
-        padding-left: 0;
-    }
-}
-
 /* ==============================
         COMPARING SECTION
 ================================= */
@@ -641,6 +544,7 @@ body {
 .comparing-section {
     padding: 70px 0;
     overflow: hidden;
+    z-index: 1;
 }
 .comparing-container {
     display: flex;
@@ -728,43 +632,6 @@ body {
     background-color: #68b0c9;
 }
 
-@media (max-width: 800px) {
-    .compare-first-arrow,
-    .compare-fifth-arrow {
-        top: 6px;
-    }
-    .compare-second-arrow,
-    .compare-sixth-arrow {
-        top: 110px;
-    }
-    .compare-third-arrow,
-    .compare-seventh-arrow {
-        top: 170px;
-    }
-    .compare-fourth-arrow,
-    .compare-eighth-arrow {
-        top: 218px;
-    }
-}
-@media (max-width: 760px) {
-    .comparing-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .col-1-2 {
-        width: 60%;
-    }
-    .separator {
-        display: none;
-    }
-    .right-column {
-        padding-top: 40px;
-    }
-    .comparing-title {
-        text-align: center;
-    }
-}
-
 /* ==============================
         COMPARING SECTION
 ================================= */
@@ -804,17 +671,6 @@ body {
 }
 .location-text-container > img {
     margin-bottom: 20px;
-}
-
-@media (max-width: 760px) {
-    .location-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .location-container .map-block,
-    .location-container .location-text-container {
-        width: 80%;
-    }
 }
 
 /* ==========================
