@@ -28,7 +28,7 @@ $(() => {
     $orderBackCallForm.on('submit', onSubmitForm);
     
     function startCounter() {
-        $(".counter").counterUp({
+        $('.counter').counterUp({
             delay: 10,
             time: 1500     
         });
@@ -49,12 +49,17 @@ $(() => {
     }
     function onSubmitForm(e) {
         e.preventDefault();
-        submitForm($(e.target.closest('.order-back-call-form'))
-                                .find('.phone-field')
-                                .val());
+        const $phoneField = $(e.target.closest('.order-back-call-form')).find('.phone-field');
+        const phone = $phoneField.val();
+
+        if(isValidPhone(phone)) {
+            $phoneField.removeClass('invalid');
+            submitForm(phone);
+        } else {
+            $phoneField.addClass('invalid');
+        }
     }
     function submitForm(phone) {
-        if(isValidPhone(phone)) {
         //     fetch(URL, {
         //         method: 'POST',
         //         headers: {
@@ -62,10 +67,7 @@ $(() => {
         //         },
         //         body: JSON.stringify(phone)
         //     });
-            showSuccessModal();
-        } else {
-            showErrorMessage();
-        }
+        showSuccessModal();
     }
     function isValidPhone(phone) {
         return phone.length === 16;
@@ -76,6 +78,6 @@ $(() => {
         $successModal.addClass(ACTIVE_CLASS);
     }
     function resetForm() {
-        $orderBackCallForm.trigger("reset");
+        $orderBackCallForm.trigger('reset');
     }
 });
