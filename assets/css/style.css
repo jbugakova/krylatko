@@ -212,6 +212,9 @@ body {
     border-radius: 17px;
     padding: 0 15px;
 }
+.order-back-call-form .phone-field.invalid {
+    border: 1px solid red;
+}
 .order-back-call-form .phone-field:focus,
 .order-back-call-form .submit:focus {
     outline: none;
